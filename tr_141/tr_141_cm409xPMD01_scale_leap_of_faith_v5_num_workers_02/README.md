@@ -2,7 +2,7 @@
 
 ### TLDR
 
-trying to see if hanging would go aweay with `CUDA_LAUNCH_BLOCKING=1` and also using https://github.com/huggingface/m4/pull/1111 to see if context manager used by accelerate to do grad accum is an issue - as we discovered that contextlib suppressed some exceptions - and that's what troubles us - we get hanging, but we get no tracebacks that tell us where the problem is.
+trying to see if hanging would go away with `CUDA_LAUNCH_BLOCKING=1` and also using https://github.com/huggingface/m4/pull/1111 to see if context manager used by accelerate to do grad accum is an issue - as we discovered that contextlib suppressed some exceptions - and that's what troubles us - we get hanging, but we get no tracebacks that tell us where the problem is.
 
 It didn't help.
 
