@@ -5,11 +5,13 @@
 
 hypotheses - trying to use deepspeed from july-19-22 - around time when we trained BLOOM but also trying grad clip of 2.0
 
-Success! This run finished a 20h run - no problems whatsoever - so we definitely have a solid setup with deepspeed-v0.6.7 but with a bug fix cherry-picked commit added to it.  You can use:
+**Success!** This run finished a 20h run - no problems whatsoever - so we definitely have a solid setup with deepspeed-v0.6.7 but with a bug fix cherry-picked commit added to it.
+
+The loss was having issues as it's the case right, now but the purpose of this experiment was to find a non-crashing setup and not deal with loss.
 
 ![loss.png](loss.png)
 
-Run for 5k iterations over 20h (and a few hours in another run before that, was just configured to run for 6h)
+The training run for 5k iterations over 20h (and a few hours in another run before that, was just configured to run for 6h)
 
 
 ### Setup

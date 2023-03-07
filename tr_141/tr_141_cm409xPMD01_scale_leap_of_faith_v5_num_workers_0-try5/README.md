@@ -1,10 +1,10 @@
-experiment
+# experiment 0.5
 
 
 ### TLDR
 
 Using https://github.com/huggingface/m4/pull/1111 to see if context manager used by accelerate to do grad accum is an issue
-and trying grad_clip == 00
+and trying `grad_clip=0.0`
 
 Training stopped with one whole node stopping to respond at all - couldn't ssh to it.
 
