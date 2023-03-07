@@ -4,8 +4,10 @@ Besides the usual experiment entries at https://github.com/huggingface/m4/ this 
 
 But since there are multiple instructions on how debug and analysis of problems was done these logs can be invaluable to some people.
 
+## How to organize
+
+Feel free to organize and name the sub-folders in any way you like, grouping experiments that try to resolve a single issue together and if there multiple sub-experiments giving a common README that helps the reader navigate the multitude of entries and/or showing the critical successful entries. e.g. for a possible approach see [tr_141-hanging](./tr_141-hanging). But please use whatever is most productive for you and you reading this 6-12 months later.
+
 ## What to log
 
-Try to log as much pertinent information as possible, including relevant snippets of log files - so that if 6 months later you need to come back to understand an old experiment all the essential bits of information ideally would be here.
-
-Feel free to organize and name the sub-folders in any way you like, grouping experiments that try to resolve a single issue together and if there multiple sub-experiments giving a common README that helps the reader navigate the multitude of entries and/or showing the critical successful entries. e.g. for a possible approach see [tr_141-hanging](./tr_141-hanging).
+Try to log as much pertinent information as possible, including relevant snippets of log files - so that if 6-12 months later you need to come back to understand an old experiment all the essential bits of information ideally would be here.
