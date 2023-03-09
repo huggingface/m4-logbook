@@ -212,7 +212,7 @@ Sat Mar  4 04:38:36 2023
 +-----------------------------------------------------------------------------+
 ```
 
-alright, so we can now see from nvidia-smi that pid 280059 is our problematic process. because it's corresponds for gpu0.
+alright, so we can now see from nvidia-smi that pid 280059 is our problematic process. because it corresponds for gpu0.
 ```
 +-----------------------------------------------------------------------------+
 | Processes:                                                                  |
