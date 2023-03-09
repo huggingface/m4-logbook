@@ -119,13 +119,15 @@ find . -name "trace*" -exec sh -c 'echo "$1: $(grep "barrier (torch/distri" $1 |
 ./trace-jean-zay-iam39.out: 7
 ./trace-jean-zay-iam50.out: 6
 ```
-weird, missing reports, I added sleep 3, after py-spy and all got 8 matches on all nodes except 06 - so I knew it was a problem.
+weird, missing reports, I added sleep 3, after py-spy and all got 8 matches on all nodes except 06 - so I knew it was the problematic node.
 ```
-srun --overlap --jobid=1882409 --gres=gpu:0 --nodes=8 --tasks-per-node=1 --output=trace-%N.out bash -c 'source $cnw_ALL_CCFRWORK/start-m4-user; conda activate stas-m4; pgrep -P $(pgrep -o accelerate) | xargs -I {} py-spy dump --pid {}; sleep 3' || echo "failed"
+srun --overlap --jobid=1882409 --gres=gpu:0 --nodes=8 --tasks-per-node=1 --output=trace-%N.out bash -c \
+'source $cnw_ALL_CCFRWORK/start-m4-user; conda activate stas-m4; pgrep -P $(pgrep -o accelerate) | \
+xargs -I {} py-spy dump --pid {}; sleep 3' || echo "failed"
 ```
 ok going into the problematic node
 ```
-sh jean-zay-iam06
+ssh jean-zay-iam06
 source $cnw_ALL_CCFRWORK/start-m4-user; conda activate stas-m4;
 pgrep -P $(pgrep -o accelerate) | xargs -I {} py-spy dump --pid {} > trace-2/trace-jean-zay-iam06-2.out
 Error: Failed to suspend process
